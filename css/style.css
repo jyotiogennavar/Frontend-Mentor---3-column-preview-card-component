@@ -32,6 +32,7 @@ html, body {
   margin: 1rem;
   display: grid;
   grid-template-columns: 1fr;
+  border-radius: 12px;
 }
 
 .card {
@@ -63,18 +64,36 @@ html, body {
   margin-bottom: 25px;
 }
 
-.card__btn button {
-  background-color: var(--color-neutral-white);
-  width: 146px;
-  height: 48px;
-  border-radius: 25px;
-  border: 0;
-    
+ .card__btn {
+  text-decoration: none;
+  background-color:hsl(0, 0%, 95%);
+  /* width: 146px;
+  height: 48px; */
+  padding: 13px 27px;
+  border-radius: 26px;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all .4s ease-in-out;
+  cursor: pointer;
 }
+
+.sedan a {color: var(--color-orange);}
+.suv a {color: var(--color-cyan);}
+.lux a {color: var(--color-dark-cyan);}
+
+.card__btn:hover {
+  color: hsl(0, 0%, 95%);
+ background: transparent;
+}
+
+
 
 @media (min-width: 950px) {
   .card__wrapper {
     width: 920px;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__content {
+    margin-bottom: 83px;
   }
 }
